@@ -1,0 +1,46 @@
+.grid li, nav li, a {
+  cursor: pointer; }
+
+* {
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul,
+li {
+  list-style: none; }
+
+body {
+  width: 100%;
+  background: url("https://github.com/miriambyrne/portfolio/blob/main/assets/background.svg");
+  background-size: 50% 100%;
+  background-repeat: repeat-x; }
+
+header {
+  width: 100%; }
+
+nav {
+  width: 100%;
+  border: 2px solid green; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed red; }
+  nav li {
+    border: 2px dotted orange; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .grid li {
+    border: 2px solid green; }
+  .grid h3 {
+    border: 2px dashed red; }
