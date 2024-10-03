@@ -1,0 +1,81 @@
+$main-background: white;
+$header-text-color: black;
+
+@mixin flex-row($align, $justify) {
+   display: flex;
+   flex-direction: row;
+   align-items: $align;
+   justify-content: $justify;
+}
+
+@mixin flex-col($align, $justify) {
+   display: flex;
+   flex-direction: col;
+   align-items: $align;
+   justify-content: $justify;
+}
+
+%cursor-pointer {
+   cursor: pointer;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   margin-inline-start: 0;
+   margin-inline-end: 0;
+   box-sizing: border-box;
+}
+
+a {
+   @extend %cursor-pointer;
+   text-decoration: none;
+   color: black;
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+body {
+   width: 100%;
+   background: url("https://github.com/miriambyrne/portfolio/blob/main/assets/background.svg");
+   background-size: 50% 100%;
+   background-repeat: repeat-x;
+}
+
+header {
+   width: 100%;
+}
+
+
+nav {
+   width: 100%;
+   border: 2px solid green;
+
+   ul {
+      @include flex-row(center, center);
+      border: 2px dashed red;
+   }
+
+   li {
+      @extend %cursor-pointer;
+      border: 2px dotted orange;
+   }
+
+}
+
+.grid {
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   
+   li {
+      border: 2px solid green;
+      @extend %cursor-pointer;
+   }
+   
+   h3 {
+      border: 2px dashed red;
+   }
+}
